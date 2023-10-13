@@ -3,3 +3,21 @@
 3 -> 1, 8, 27
 5 -> 1, 8, 27, 64, 125 */
 
+Console.Write($"Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if (number >= 1)
+{
+    int current = 1;
+    while (current <= number) 
+    {
+        int result = current * current * current;
+        Console.Write($"{result}, "); 
+        current++;
+    }
+    Console.WriteLine("\b\b "); // удаление двух последних символов "," и " "
+}
+else
+{
+    Console.WriteLine("Ошибка!");    
+}
