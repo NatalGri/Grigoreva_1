@@ -16,3 +16,10 @@ else
 {
     System.Console.WriteLine("Ошибка! Число должно быть трехзначным!");
 }
+
+/* string? strNumber = Console.ReadLine(); // короткое решение с помощью массива букв
+                                           // (поэтому оформлен без [] - так был бы массив строк)
+if (strNumber?.Length == 3)
+System.Console.WriteLine(strNumber[1]);
+else
+System.Console.WriteLine("Введено не трехзначное число! "); */
