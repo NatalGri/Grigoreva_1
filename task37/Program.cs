@@ -8,36 +8,36 @@ using System.Linq.Expressions;
 
 int[] GenerateArray(int sizeArray, int leftRange, int rightRange) // int, string, double, double[]
 {
-int[] newArray = new int[sizeArray];
-Random rand = new Random();
+    int[] newArray = new int[sizeArray];
+    Random rand = new Random();
 
-for (int i = 0; i < newArray.Length; i++)
-{
-newArray[i] = rand.Next(leftRange, rightRange + 1);
-}
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        newArray[i] = rand.Next(leftRange, rightRange + 1);
+    }
 
-return newArray;
+    return newArray;
 }
 
 void PrintArray(int[] arrayForPrint) // void
 {
-Console.WriteLine("[" + string.Join(", ", arrayForPrint) + "]");
+    Console.WriteLine("[" + string.Join(", ", arrayForPrint) + "]");
 }
 
 int[] MultArrayElements(int[] array)
 {
-// int[] newArray = new int[array.Length / 2 + array.Length % 2];
-int[] newArray = new int[(array.Length + 1) / 2]; // выделили память под новый массив
+    // int[] newArray = new int[array.Length / 2 + array.Length % 2];
+    int[] newArray = new int[(array.Length + 1) / 2]; // выделили память под новый массив
 
-for(int i = 0; i < array.Length / 2; i++)
-{
-newArray[i] = array[i] * array[array.Length - 1 - i];
-}
+    for (int i = 0; i < array.Length / 2; i++)
+    {
+        newArray[i] = array[i] * array[array.Length - 1 - i];
+    }
 
-if(array.Length % 2 == 1)
-newArray[newArray.Length - 1] = array[array.Length / 2];
+    if (array.Length % 2 == 1)
+        newArray[newArray.Length - 1] = array[array.Length / 2];
 
-return newArray;
+    return newArray;
 }
 
 // -------------------------------
