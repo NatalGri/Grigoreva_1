@@ -33,8 +33,20 @@ int SumOddElements(int[] arraySum)
     return sumOdd;
 }
 
+/* int SumOddElements(int[] arraySum)
+{
+    int sumOdd = 0;
+    for (int i = 0; i < arraySum.Length; i++)
+    {
+        if(i % 2 !=0)
+        {
+            sumOdd = sumOdd + arraySum[i];    
+        }
+    }
+    return sumOdd;
+} */
 
-int[] array = GenerateArray(6, 1, 20);
+int[] array = GenerateArray(5, 1, 20);
 PrintArray(array);
 int sumOdd = SumOddElements(array);
 Console.WriteLine($"Сумма нечетных элементов: {sumOdd}");
