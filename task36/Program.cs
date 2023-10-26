@@ -25,25 +25,25 @@ void PrintArray(int[] arrayForPrint)
 
 int SumOddElements(int[] arraySum)
 {
-    int sumOdd = 0;
+    int sum = 0;
     for (int i = 1; i < arraySum.Length; i+=2)
     {
-        sumOdd = sumOdd + arraySum[i];
+        sum += arraySum[i];
     }
-    return sumOdd;
+    return sum;
 }
 
-/* int SumOddElements(int[] arraySum)
+/* int SumOddElements(int[] arraySum) // второй способ
 {
-    int sumOdd = 0;
+    int sum = 0;
     for (int i = 0; i < arraySum.Length; i++)
     {
         if(i % 2 !=0)
         {
-            sumOdd = sumOdd + arraySum[i];    
+            sum += arraySum[i];    
         }
     }
-    return sumOdd;
+    return sum;
 } */
 
 int[] array = GenerateArray(5, 1, 20);
