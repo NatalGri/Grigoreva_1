@@ -4,26 +4,26 @@
 
 int[] GenerateArray(int sizeArray, int leftRange, int rightRange) // int, string, double, double[]
 {
-int[] newArray = new int[sizeArray];
-Random rand = new Random();
+    int[] newArray = new int[sizeArray];
+    Random rand = new Random();
 
-for (int i = 0; i < newArray.Length; i++)
-{
-newArray[i] = rand.Next(leftRange, rightRange + 1);
-}
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        newArray[i] = rand.Next(leftRange, rightRange + 1);
+    }
 
-return newArray;
+    return newArray;
 }
 
 void PrintArray(int[] arrayForPrint) // void
 {
-Console.WriteLine("[" + string.Join(", ", arrayForPrint) + "]");
+    Console.WriteLine("[" + string.Join(", ", arrayForPrint) + "]");
 }
 
 void ChangeArray(int[] array)
 {
-for(int i = 0; i < array.Length; i++)
-array[i] = -array[i];
+    for (int i = 0; i < array.Length; i++)
+        array[i] = -array[i];
 }
 
 // -------------------------------
